@@ -1,122 +1,93 @@
-/* Import Google Fonts */
-@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;600;800&display=swap');
-
-/* Root Variables for Easy Theming */
-:root {
-  --primary-color: #FFD700; /* Yellow */
-  --secondary-color: #000000; /* Black */
-  --accent-color: #FFD700; /* Yellow */
-  --text-color: #ffffff; /* White */
-  --background-color: #000000; /* Black */
-}
-
-/* General Reset and Base Styles */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  transition: all 0.3s ease;
-}
-
+/* Global Styles */
 body {
-  font-family: 'Poppins', sans-serif;
-  background-color: var(--background-color);
-  color: var(--text-color);
-  line-height: 1.6;
+    font-family: 'Poppins', sans-serif;
+    background-color: #000;
+    color: #f8f9fa;
 }
 
-/* Header Styling with Animation */
+/* Navbar Styles */
+.custom-navbar {
+    background-color: #000;
+}
+
+.navbar-brand {
+    color: #fbd002;
+}
+
+.navbar-nav .nav-link {
+    color: #fbd002;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #fff;
+}
+
+/* Header Section */
 .header {
-  background: linear-gradient(135deg, var(--primary-color), var(--secondary-color));
-  position: relative;
-  overflow: hidden;
-  padding: 4rem 0;
+    background-color: #fbd002;
+    padding-top: 80px;
+    padding-bottom: 80px;
 }
 
 #heading {
-  font-family: 'Montserrat', sans-serif;
-  font-weight: 800;
-  color: var(--text-color);
-  transition: transform 0.3s ease;
+    color: #000;
+    font-size: 3rem;
+    font-weight: 700;
 }
 
-#heading:hover {
-  transform: scale(1.05);
+.lead {
+    color: #000;
+    font-size: 1.25rem;
 }
 
-/* Navigation Styling */
-.navbar {
-  background-color: var(--accent-color);
+/* Section Styles */
+.section {
+    padding: 60px 0;
 }
 
-.nav-link {
-  color: var(--text-color) !important;
-  font-weight: 600;
-  position: relative;
+.about-g {
+    color: #fbd002;
+    font-size: 2.5rem;
+    margin-bottom: 20px;
 }
 
-.nav-link::after {
-  content: '';
-  position: absolute;
-  width: 0;
-  height: 2px;
-  bottom: 0;
-  left: 50%;
-  background-color: var(--secondary-color);
-  transition: all 0.3s ease;
+/* Card Styles */
+.card {
+    border: none;
+    background-color: #222;
+    color: #fbd002;
+    margin-bottom: 20px;
 }
 
-.nav-link:hover::after {
-  width: 100%;
-  left: 0;
+.card-body {
+    padding: 30px;
 }
 
-/* Image Styling with Hover Effect */
-.img-fluid {
-  border-radius: 15px;
-  box-shadow: 0 10px 20px rgba(0,0,0,0.2);
-  transition: all 0.4s ease;
+.card h5 {
+    color: #fbd002;
 }
 
-.img-fluid:hover {
-  transform: scale(1.05);
-  box-shadow: 0 15px 30px rgba(0,0,0,0.3);
+.card ul {
+    list-style-type: none;
+    padding-left: 0;
 }
 
-/* Footer Image Styling */
+.card ul li {
+    color: #f8f9fa;
+}
+
+/* Footer Styles */
+.footer {
+    background-color: #000;
+    color: #fbd002;
+}
+
 .footer-img {
-  width: 50px;
-  height: 50px;
-  transition: transform 0.3s ease;
+    width: 30px;
+    height: 30px;
+    margin: 0 10px;
 }
 
-.footer-img:hover {
-  transform: scale(1.2) rotate(360deg);
-}
-
-/* Responsive Adjustments */
-@media (max-width: 768px) {
-  .section {
-    padding: 2rem 0;
-  }
-
-  #roadmap .col-md-3 {
-    margin-bottom: 1rem;
-  }
-
-  .footer-img {
-    width: 40px;
-    height: 40px;
-  }
-
-  .img-standard {
-    max-width: 100%;
-    height: auto;
-    margin: 10px 0;
-  }
-}
-
-/* Scroll Animation */
-html {
-  scroll-behavior: smooth;
+.text-white {
+    color: #fff;
 }
