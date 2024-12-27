@@ -1,166 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Groat - History Meets Innovation</title>
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/css/bootstrap.min.css" rel="stylesheet">
-    <link rel="stylesheet" href="style.css">
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600;700&family=Montserrat:wght@400;600;800&display=swap" rel="stylesheet">
+    <title>GROAT - Ancient Crypto</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
-
 <body>
-    <!-- Navbar -->
-    <nav class="navbar navbar-expand-lg navbar-dark custom-navbar">
+    <nav class="navbar navbar-expand-lg">
         <div class="container">
             <a class="navbar-brand" href="#">GROAT</a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
-                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#about">About</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#why">Why GROAT</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#roadmap">Roadmap</a>
-                    </li>
+                <ul class="navbar-nav me-auto">
+                    <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#tokenomics">TOKENOMICS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#dexscreener">DEXSCREENER</a></li>
                 </ul>
+                <button class="btn btn-join" data-bs-toggle="modal" data-bs-target="#telegramModal">JOIN US</button>
             </div>
         </div>
     </nav>
 
-    <!-- Header Section -->
-    <header class="header text-center py-5">
-        <div class="container">
-            <h1 id="heading" class="display-3 text-white">Welcome to GROAT</h1>
-            <p class="lead text-white">Where history meets endless possibility, inspired by the ancient Groat coin.</p>
-            <img src="G1.jpg" alt="Groat Coin" class="img-fluid img-standard rounded shadow-lg mt-4">
+    <div class="wave-border"></div>
+
+    <header class="hero-section">
+        <div class="container text-center">
+            <h1 class="main-title">GROAT</h1>
+            <p class="subtitle">Ancient Wisdom, Modern Gains</p>
         </div>
     </header>
 
-    <!-- About Section -->
-    <section id="about" class="section">
-        <div class="container text-center">
-            <h2 class="about-g">ABOUT GROAT</h2>
-            <p> $GROAT represents the perfect fusion of history and innovation. Inspired by the ancient Groat coin, it carries the legacy of trade, prosperity, and timeless value. With resilience and wisdom at its core, $GROAT honors the past while paving the way for a boundless digital future.</p>
-            <img src="G3.jpg" alt="Groat Coin History" class="img-fluid img-standard rounded shadow-lg mt-4">
-        </div>
-    </section>
-
-    <!-- Why GROAT Section -->
-    <section id="why" class="section">
-        <div class="container text-center">
-            <h2 class="about-g">WHY $GROAT</h2>
-            <p>Become part of a passionate and diverse community that values both history and innovation.</p>
-            <div class="row">
-                <div class="col-md-4">
-                    <h4>Rich Community</h4>
-                    <p>Become part of a passionate and diverse community that values both history and innovation. $GROAT brings together crypto enthusiasts and history buffs, creating a space where knowledge, fun, and growth intersect to shape a positive and welcoming environment.</p>
-                </div>
-                <div class="col-md-4">
-                    <h4>Distinctive Identity</h4>
-                    <p>$GROAT shines with its unique heritage, drawing inspiration from the ancient medieval coin known for its enduring value. We blend the tradition of wealth with modern crypto excitement, offering something both meaningful and enjoyable for all — from newcomers to experienced investors.</p>
-                </div>
-                <div class="col-md-4">
-                    <h4>Thriving Ecosystem</h4>
-                    <p>Our dynamic ecosystem is more than just a coin — it’s about experiences. With exciting rewards, challenges, and events, we keep the energy high and the community engaged. $GROAT is about more than growth; it’s about creating lasting connections and unforgettable moments.</p>
-                </div>
-                <div class="col-md-4">
-                    <h4>Clear Vision</h4>
-                    <p>$GROAT is focused on becoming a strong player in the crypto world. We’re dedicated to growth and innovation, always looking for new ways to make our token more valuable and useful in the long run.</p>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- Roadmap Section -->
-    <section id="roadmap" class="section">
-        <div class="container text-center">
-            <h2 class="about-g">ROADMAP</h2>
-            <div class="row">
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5>Phase 1</h5>
-                            <ul>
-                                <li>Smart Contract Development</li>
-                                <li>Token Launch</li>
-                                <li>Community Building</li>
-                                <li>Kickoff Marketing Campaign</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5>Phase 2</h5>
-                            <ul>
-                                <li>Strategic Partnerships</li>
-                                <li>Audit & KYC Verification</li>
-                                <li>500–2,000 Holders Milestone</li>
-                                <li>CG/CMC Listing</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5>Phase 3</h5>
-                            <ul>
-                                <li>Centralized Exchange Listing</li>
-                                <li>Launch of Staking Platform</li>
-                                <li>Intensive Marketing Campaign</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-md-3">
-                    <div class="card">
-                        <div class="card-body">
-                            <h5>Phase 4</h5>
-                            <ul>
-                                <li>Commitment to Longevity</li>
-                                <li>Community-Focused Evolution</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <p>$GROAT, once the prized coin of its time, will shine again—bringing wealth with every wag of the tail!</p>
-
-    <!-- Footer Section -->
-    <footer class="footer text-center py-4">
+    <section id="about" class="py-5">
         <div class="container">
-            <p>&copy; 2024 GROAT. All rights reserved.</p>
-            <div>
-                <!-- Twitter -->
-                <a href="https://twitter.com/groat_on_sol_" target="_blank">
-                    <img src="twitter.png" alt="Social Media Icon" class="footer-img">
-                </a>
-                <!-- Telegram Icon -->
-                <a href="https://t.me/+BRBWjqV9Lbc3ZTg0" target="_blank" class="text-white">
-                    <img src="telegram.jpg" alt="Telegram" style="width: 30px; height: 30px;">
-                </a>
+            <div class="content-box">
+                <h2>About GROAT</h2>
+                <div class="row align-items-center">
+                    <div class="col-md-6">
+                        <p>$GROAT represents the perfect fusion of history and innovation. Inspired by the ancient Groat coin, it carries the legacy of trade, prosperity, and timeless value</p>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="G1.jpg" alt="Ancient Groat" class="img-fluid rounded-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="tokenomics" class="py-5">
+        <div class="container">
+            <div class="content-box">
+                <h2>Tokenomics</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <div class="tokenomics-list">
+                            <div class="token-item">
+                                <span>Total Supply:</span>
+                                <span class="highlight">X</span>
+                            </div>
+                            <div class="token-item">
+                                <span>Contract:</span>
+                                <span class="highlight">RENOUNCED</span>
+                            </div>
+                            <div class="token-item">
+                                <span>LP:</span>
+                                <span class="highlight">BURNT</span>
+                            </div>
+                            <div class="token-item">
+                                <span>Tax:</span>
+                                <span class="highlight">0%</span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-md-6">
+                        <img src="G3.jpg" alt="Tokenomics" class="img-fluid rounded-image">
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <section id="roadmap" class="py-5">
+        <div class="container">
+            <div class="content-box">
+                <h2>Roadmap</h2>
+                <div class="row">
+                    <div class="col-md-6">
+                        <img src="G6.jpg" alt="Roadmap" class="img-fluid rounded-image">
+                    </div>
+                    <div class="col-md-6">
+                        <div class="roadmap-phases">
+                            <div class="phase">
+                                <h3>Phase I</h3>
+                                <ul>
+                                    <li>Website Launch</li>
+                                    <li>Community Building</li>
+                                    <li>Token Launch</li>
+                                </ul>
+                            </div>
+                            <div class="phase">
+                                <h3>Phase II</h3>
+                                <ul>
+                                    <li>Marketing Campaign</li>
+                                    <li>CEX Listings</li>
+                                    <li>Partnership Development</li>
+                                </ul>
+                            </div>
+                            <div class="phase">
+                                <h3>Phase III</h3>
+                                <ul>
+                                    <li>Centralized Exchange Listing</li>
+                                    <li>Launch of Staking Platform</li>
+                                    <li>Intensive Marketing Campaign</li>
+                                </ul>
+                            </div>
+                            <div class="phase">
+                                <h3>Phase IV</h3>
+                                <ul>
+                                    <li> Commitment to Longevity </li>
+                                    <li>Community-Focused Evolution</li>
+                                </ul>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <section id="dexscreener" class="py-5">
+        <div class="container">
+            <div class="content-box">
+                <h2>Dexscreener</h2>
+                <p></p>
+            </div>
+        </div>
+    </section>
+
+    <footer class="footer">
+        <div class="container">
+            <div class="social-bar">
+                <a href="https://t.me/+BRBWjqV9Lbc3ZTg0" class="social-icon"><i class="bi bi-telegram"></i></a>
+                <a href="https://x.com/groat_on_sol_"class="social-icon"><i class="bi bi-twitter"></i></a>
             </div>
         </div>
     </footer>
 
-    <!-- Bootstrap JS and dependencies -->
-    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.6/dist/umd/popper.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.1/dist/js/bootstrap.min.js"></script>
-</body>
+    <!-- Modal -->
+    <div class="modal fade" id="telegramModal" tabindex="-1" aria-labelledby="telegramModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <h5 class="modal-title" id="telegramModalLabel">Join Us on Telegram</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <p>Connect with us on Telegram for updates and community discussions:</p>
+                    <a href="https://t.me/+BRBWjqV9Lbc3ZTg0" class="btn btn-success">Join Telegram</a>
+                </div>
+            </div>
+        </div>
+    </div>
 
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+</body>
 </html>
