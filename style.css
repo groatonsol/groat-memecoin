@@ -19,9 +19,10 @@
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap'); /* Import new Greek font */
 @import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap'); /* Import Comic Sans-like font */
 @import url('https://fonts.googleapis.com/css2?family=Babydoll&display=swap'); /* Import Babydoll font */
+@import url('https://fonts.googleapis.com/css2?family=Ribeye&display=swap');
 
 body {
-    font-family: 'Babydoll', cursive; /* Apply Babydoll font */
+    font-family: 'Ribeye', cursive; /* Apply Ribeye font */
     font-weight: 600; /* Add semi-bold weight to all text */
     color: var(--text-color); /* Use white for text */
     background: var(--bg-color) url('G7.jpg') no-repeat center center fixed;
@@ -527,19 +528,15 @@ body::before {
 }
 
 #about::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(13, 59, 18, 0.4); /* Light green overlay for readability */
-    z-index: 1;
+    display: none; /* Remove the green overlay */
 }
 
 #about .container {
     position: relative;
     z-index: 2;
+    background: rgba(0, 0, 0, 0.6); /* Add dark overlay for text readability */
+    padding: 2rem;
+    border-radius: 10px;
 }
 
 #tokenomics {
