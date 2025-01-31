@@ -1,57 +1,120 @@
 :root {
-    --primary-green: #2E7D32;
-    --secondary-green: #1B5E20;
-    --accent-yellow: #FFD700;
-    --light-yellow: #ffffff;
-    --bg-color: #FFFDE7;
-    --hot-green: #39FF14;
-    --text-color: #000000; /* Changed text color to black for better readability */
-    --about-color: #4CAF50; /* New color for About section */
-    --roadmap-color: #FF9800; /* New color for Roadmap section */
-    --tokenomics-color: #3F51B5; /* New color for Tokenomics section */
-    --header-groat-color: #FFD700; /* New color for GROAT in the header */
+    --primary-green: #0D3B12; /* Darkest green */
+    --secondary-green: #000000; /* Black */
+    --accent-yellow: #FFFFFF; /* White */
+    --light-yellow: #FFFFFF; /* White */
+    --bg-color: #0D3B12; /* Darkest green background */
+    --hot-green: #00FF00; /* Green */
+    --text-color: #FFFFFF; /* White text color */
+    --about-color: #FFFFFF; /* White */
+    --roadmap-color: #FFFFFF; /* White */
+    --tokenomics-color: #FFFFFF; /* White */
+    --header-groat-color: yellow; /* White outline color */
+    --outline-color: #FFFFFF; /* White outline color */
+    --header-bg-color: #0A2A0E; /* Different shade of dark green for header */
+    --phase-title-color: #FFFFFF; /* White */
+    --mobile-navbar-color: #0D3B12; /* Dark green for mobile navbar */
 }
 
 @import url('https://fonts.googleapis.com/css2?family=EB+Garamond&display=swap'); /* Import new Greek font */
+@import url('https://fonts.googleapis.com/css2?family=Comic+Neue:wght@700&display=swap'); /* Import Comic Sans-like font */
+@import url('https://fonts.googleapis.com/css2?family=Babydoll&display=swap'); /* Import Babydoll font */
 
 body {
-    font-family: 'EB Garamond', serif; /* Apply new Greek font */
-    background: var(--bg-color);
-    color: var(--text-color); /* Updated text color */
+    font-family: 'Babydoll', cursive; /* Apply Babydoll font */
+    color: var(--text-color); /* Use white for text */
+    background: var(--bg-color) url('G7.jpg') no-repeat center center fixed;
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+/* Add overlay to body */
+body::before {
+    content: '';
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(13, 59, 18, 0.8);
+    z-index: -1;
 }
 
 /* Navbar Styles */
 .navbar {
-    background-color: var(--primary-green);
+    background-color: var(--primary-green); /* Change navbar background color to dark green */
     padding: 1rem 0;
+    border-bottom: 5px solid var(--secondary-green); /* Use black for outline */
 }
 
 .navbar-brand, .nav-link {
-    color: var(--accent-yellow) !important;
-    font-size: 1.2rem;
-    font-family: 'EB Garamond', serif; /* Apply new Greek font */
+    color: var(--text-color) !important; /* Use white for text */
+    font-size: 1.5rem; /* Increase font size */
+    font-family: 'Comic Neue', cursive; /* Keep meme font for headers */
+    text-shadow: 2px 2px var(--secondary-green); /* Use black for shadow */
 }
 
+@keyframes cartoon-bounce {
+    0%, 100% {
+        transform: translateY(0);
+    }
+    50% {
+        transform: translateY(-10px);
+    }
+}
+
+@keyframes cartoon-color {
+    0%, 100% {
+        color: var(--text-color);
+    }
+    50% {
+        color: var(--accent-yellow);
+    }
+}
+
+@keyframes memecoin-spin {
+    0% {
+        transform: rotate(0deg);
+    }
+    100% {
+        transform: rotate(360deg);
+    }
+}
+
+
+
 .navbar-brand {
-    font-family: 'GFS Neohellenic', serif; /* Apply new Greek font to GROAT */
-    color: var(--header-groat-color) !important; /* Apply new color to GROAT */
-    font-size: 3rem; /* Reduce font size */
-    text-shadow: 2px 2px var(--accent-yellow); /* Add shadow to make it eye-catching */
+    font-family: 'Chopsic', serif; /* Apply Chopsic font to GROAT */
+    color: yellow !important; /* Change color to yellow */
+    font-size: 3.5rem; /* Increase font size */
+    text-shadow: 3px 3px var(--secondary-green); /* Use black for shadow */
     line-height: 1.2; /* Adjust line height for two lines */
+    position: relative;
+}
+
+.navbar-brand::before {
+    content: url('G9.jpg'); /* Use G9 image for 'O' */
+    position: absolute;
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 3.5rem; /* Match the font size of the text */
 }
 
 .nav-link:hover {
-    color: var(--light-yellow) !important;
+    color: var(--accent-yellow) !important; /* Use white on hover */
 }
 
 .btn-buy, .btn-join {
-    font-family: 'Uncial Antiqua', cursive; /* Apply Uncial font */
+    font-family: 'Comic Neue', cursive; /* Apply meme font */
+    border: 3px solid var(--outline-color); /* Add bold outline */
+    color: yellow;
 }
 
 .btn-buy {
-    background: linear-gradient(45deg, var(--hot-green), var(--accent-yellow));
-    color: rgb(255, 255, 255);
-    font-size: 1.5rem; /* Increased font size */
+    background: linear-gradient(45deg, var(--primary-green), var(--secondary-green));
+    color: var(--text-color);
+    font-size: 1.8rem; /* Increase font size */
     border-radius: 25px;
     padding: 1rem 3rem; /* Increased padding */
     font-weight: bold;
@@ -63,51 +126,47 @@ body {
 .btn-buy:hover {
     transform: scale(1.1);
     box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-    background: linear-gradient(45deg, var(--accent-yellow), var(--hot-green));
+    background: linear-gradient(45deg, var(--secondary-green), var(--primary-green));
 }
 
 .btn-join {
+    background-color: white; /* White color */
+    color: #0D3B12; /* Dark green text color */
+    font-size: 1.5rem; /* Increase font size */
+    padding: 1rem 2rem; /* Increase padding */
+    border-radius: 50px; /* Rounded corners */
     position: relative;
-    background: var(--primary-green);
-    color: var(--light-yellow);
-    font-size: 1.5rem;
-    border-radius: 25px;
-    padding: 1rem 3rem;
-    font-weight: bold;
-    border: none;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: all 0.2s ease;
-    overflow: hidden;
 }
 
 .btn-join::before, .btn-join::after {
     content: '';
     position: absolute;
-    border: 2px solid var(--accent-yellow);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    border-radius: 25px;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
-}
-
-.btn-join::before {
-    transform: translate(-10px, -10px);
+    border: 4px solid #0D3B12; /* Increase border width to 4px */
+    border-radius: 50%;
+    width: 150%; /* Circle size */
+    height: 150%; /* Circle size */
+    top: -25%;
+    left: -25%;
+    z-index: -1;
+    animation: rotate 6s linear infinite;
 }
 
 .btn-join::after {
-    transform: translate(10px, 10px);
+    animation-direction: reverse;
 }
 
-.btn-join:hover::before, .btn-join:hover::after {
-    transform: translate(0, 0);
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
 }
 
 .btn-join:hover {
     transform: scale(1.1);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
 }
 
 /* Wave Border */
@@ -116,6 +175,7 @@ body {
     background: var(--primary-green);
     position: relative;
     overflow: hidden;
+    border-top: 5px solid var(--accent-yellow); /* Use white for outline */
 }
 
 .wave-border::after {
@@ -137,35 +197,28 @@ body {
 }
 
 .main-title {
-    font-size: 6rem; /* Make the text bigger */
-    color: var(--hot-green);
-    text-shadow: 3px 3px var(--accent-yellow);
+    font-size: 8rem; /* Make the text bigger */
+    color: var(--accent-yellow); /* Change text color to yellow */
+    text-shadow: 4px 4px var(--secondary-green); /* Use black for shadow */
     margin-bottom: 1rem;
-    font-family: 'EB Garamond', serif; /* Apply new Greek font */
-    animation: glow 1.5s infinite alternate; /* Add animation */
-}
-
-@keyframes glow {
-    0% {
-        text-shadow: 3px 3px var(--accent-yellow), 0 0 10px var(--accent-yellow), 0 0 20px var(--accent-yellow), 0 0 30px var(--accent-yellow), 0 0 40px var(--accent-yellow), 0 0 50px var (--accent-yellow), 0 0 60px var(--accent-yellow);
-    }
-    100% {
-        text-shadow: 3px 3px var(--accent-yellow), 0 0 20px var(--hot-green), 0 0 30px var(--hot-green), 0 0 40px var(--hot-green), 0 0 50px var(--hot-green), 0 0 60px var(--hot-green), 0 0 70px var(--hot-green);
-    }
+    font-family: 'Chopsic', serif; /* Apply Chopsic font */
+    font-weight: bold;
+    /* Removed animation */
 }
 
 /* Section Headers */
 .content-box h2 {
-    color: white;
+    color: var(--light-yellow); /* Use white for text */
     text-align: center;
     margin-bottom: 2rem;
     font-size: 2.5rem;
-    text-shadow: 2px 2px var(--accent-yellow);
+    text-shadow: 2px 2px var(--secondary-green); /* Use black for shadow */
+    font-family: 'Comic Neue', cursive; /* Keep meme font for headers */
 }
 
 #about .content-box h2 {
     color: var(--about-color); /* Updated color for About section header */
-    text-shadow: 2px 2px var(--accent-yellow);
+    text-shadow: 2px 2px var(--secondary-green); /* Use black for shadow */
 }
 
 #about .content-box h2 span {
@@ -174,16 +227,16 @@ body {
 
 #roadmap .content-box h2 {
     color: var(--roadmap-color); /* Updated color for Roadmap section header */
-    text-shadow: 2px 2px var(--accent-yellow);
+    text-shadow: 2px 2px var(--secondary-green); /* Use black for shadow */
 }
 
 #roadmap .content-box h2 span {
-    color: var(--accent-yellow); /* Different color for one word */
+    color: var(--accent-yellow); /* Use white for one word */
 }
 
 #tokenomics .content-box h2 {
     color: var(--tokenomics-color); /* Updated color for Tokenomics section header */
-    text-shadow: 2px 2px var(--accent-yellow);
+    text-shadow: 2px 2px var(--secondary-green); /* Use black for shadow */
 }
 
 #tokenomics .content-box h2 span {
@@ -192,9 +245,10 @@ body {
 
 /* Tokenomics */
 .tokenomics-list {
-    background: var(--light-yellow);
+    background: var(--primary-green); /* Changed to dark green */
     border-radius: 10px;
     padding: 1.5rem;
+    border: 3px solid var(--accent-yellow); /* Use white for outline */
 }
 
 .token-item {
@@ -202,8 +256,9 @@ body {
     justify-content: space-between;
     padding: 1rem;
     border-bottom: 2px solid var(--primary-green);
-    font-size: 1.2rem;
-    color: var(--text-color); /* Updated text color */
+    font-size: 1.5rem; /* Increase font size */
+    color: var(--light-yellow); /* Use white for text */
+    font-family: 'Babydoll', cursive; /* Apply Babydoll font */
 }
 
 .token-item:last-child {
@@ -211,8 +266,9 @@ body {
 }
 
 .highlight {
-    color: white;
+    color: var(--accent-yellow); /* Use white for highlight */
     font-weight: bold;
+    font-family: 'Babydoll', cursive; /* Apply Babydoll font */
 }
 
 /* Images */
@@ -234,24 +290,26 @@ body {
 
 .phase {
     margin-bottom: 2rem;
-    background: var(--light-yellow); /* Add background color */
+    background: var(--secondary-green); /* Add background color */
     border-radius: 10px; /* Add border radius */
     padding: 1.5rem; /* Add padding */
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2); /* Add box shadow */
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.3); /* Darker shadow */
     transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add transition */
+    border: 3px solid var(--accent-yellow); /* Use white for outline */
 }
 
 .phase:hover {
     transform: scale(1.05); /* Add scale effect on hover */
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3); /* Enhance box shadow on hover */
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.4); /* Enhance shadow on hover */
 }
 
 .phase h3 {
-    color: var(--primary-green); /* Change color to primary green */
-    text-shadow: 2px 2px var(--accent-yellow); /* Add text shadow */
+    color: var(--phase-title-color); /* Change color to white */
+    text-shadow: 2px 2px var(--secondary-green); /* Use black for shadow */
     padding-bottom: 0.5rem;
     margin-bottom: 1rem;
-    font-family: 'EB Garamond', serif; /* Apply new Greek font */
+    font-family: 'Comic Neue', cursive; /* Keep meme font for headers */
+    text-transform: uppercase; /* Change to capital letters */
 }
 
 .phase ul {
@@ -261,7 +319,8 @@ body {
 
 .phase ul li {
     padding: 0.5rem 0;
-    color: var(--text-color); /* Updated text color */
+    color: var(--light-yellow); /* Use white for text */
+    font-size: 1.5rem; /* Increase font size */
 }
 
 .phase ul li::before {
@@ -269,11 +328,43 @@ body {
     margin-right: 10px;
 }
 
+#roadmap {
+    position: relative;
+    background: url('G3.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+    color: var(--text-color);
+}
+
+/* Add a dark overlay to improve text readability */
+#roadmap::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(13, 59, 18, 0.8); /* Dark green overlay with 80% opacity */
+    z-index: 1;
+}
+
+#roadmap .container {
+    position: relative;
+    z-index: 2; /* Place content above the overlay */
+}
+
 /* Footer */
 .footer {
     background: var(--primary-green);
     padding: 2rem 0;
     margin-top: 3rem;
+    border-top: 5px solid var(--accent-yellow); /* Use white for outline */
+    font-family: 'Babydoll', cursive; /* Apply Babydoll font */
+    background-image: none; /* Remove background image */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
 }
 
 .social-bar {
@@ -293,6 +384,8 @@ body {
     justify-content: center;
     font-size: 1.5rem;
     transition: all 0.3s ease;
+    border: 3px solid var(--secondary-green); /* Use secondary green for outline */
+    font-family: 'Babydoll', cursive; /* Apply Babydoll font */
 }
 
 .social-icon:hover {
@@ -302,6 +395,10 @@ body {
 
 /* Responsive Design */
 @media (max-width: 768px) {
+    .navbar {
+        background-color: var(--mobile-navbar-color); /* Change navbar background color to dark green on mobile */
+    }
+
     .main-title {
         font-size: 3rem;
     }
@@ -314,90 +411,234 @@ body {
         flex-direction: column;
         text-align: center;
     }
+
+    .navbar-nav {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .btn-join {
+        display: none;
+    }
+
+    .navbar-collapse {
+        display: flex;
+        justify-content: space-between;
+        align-items: center;
+    }
+
+    .navbar-collapse::after {
+        content: none; /* Remove 'JOIN US' text */
+    }
+
+    .join-us-mobile {
+        position: absolute;
+        top: 10px;
+        right: 20px;
+        z-index: 1000;
+    }
+
+    .join-us-mobile .btn-join {
+        display: block;
+        font-size: 1.2rem; /* Reduce font size */
+        padding: 0.5rem 1.5rem; /* Reduce padding */
+        border-radius: 25px; /* Adjust border radius */
+    }
 }
 
 .header {
-    color: var(--text-color); /* Updated text color */
+    background-color: var(--header-bg-color); /* Use different shade of dark green */
+    color: var(--accent-yellow); /* Change text color to yellow */
+    border-bottom: 1px solid var(--outline-color); /* Add thin line to divide header */
 }
 
-/* Animated Box */
-.animated-box {
-    border: 3px solid var(--accent-yellow);
-    border-radius: 15px;
-    padding: 2rem;
-    margin: 2rem 0;
-    position: relative;
-    overflow: hidden;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-.animated-box::before, .animated-box::after {
-    content: '';
-    position: absolute;
-    border: 2px solid var(--primary-green);
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
-    border-radius: 15px;
-    box-sizing: border-box;
-    transition: all 0.3s ease;
-}
-
-.animated-box::before {
-    transform: translate(-10px, -10px);
-}
-
-.animated-box::after {
-    transform: translate(10px, 10px);
-}
-
-.animated-box:hover::before, .animated-box:hover::after {
-    transform: translate(0, 0);
-}
-
-.animated-box:hover {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
-}
-
-/* Apply animated box to specific sections */
+/* Remove animated box from specific sections */
 #about .content-box, #roadmap .content-box, #tokenomics .content-box {
-    position: relative;
+    position: static; /* Reset position */
+    border: none; /* Remove border */
+    box-shadow: none; /* Remove box shadow */
+    text-transform: none; /* Reset text transform */
 }
 
 #about .content-box::before, #roadmap .content-box::before, #tokenomics .content-box::before {
-    content: '';
-    position: absolute;
-    top: -10px;
-    left: -10px;
-    right: -10px;
-    bottom: -10px;
-    border: 2px solid var(--accent-yellow);
-    border-radius: 15px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    transition: transform 0.3s ease, box-shadow 0.3s ease;
-}
-
-#about .content-box:hover::before, #roadmap .content-box:hover::before, #tokenomics .content-box:hover::before {
-    transform: scale(1.05);
-    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    content: none; /* Remove pseudo-elements */
 }
 
 /* Dexscreener */
 #dexscreener .content-box h2 {
     color: var(--tokenomics-color); /* Match the color with Tokenomics section header */
-    text-shadow: 2px 2px var(--accent-yellow);
+    text-shadow: 2px 2px var(--outline-color); /* Add text shadow */
 }
 
 #dexscreener .content-box p {
     color: var(--text-color); /* Updated text color */
     font-size: 1.2rem;
     text-align: center;
-    background: var(--light-yellow);
+    background: var(--secondary-green);
     padding: 1rem;
     border-radius: 10px;
     box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+/* Remove Cartoon Image */
+.cartoon-image {
+    display: none;
+}
+
+.navbar-toggler {
+    border-color: #FFFF00; /* Make the border of the toggler yellow */
+}
+
+.navbar-toggler-icon {
+    background-image: url("data:image/svg+xml;charset=utf8,%3Csvg viewBox='0 0 30 30' xmlns='http://www.w3.org/2000/svg'%3E%3Cpath stroke='rgba(255, 255, 0, 1)' stroke-width='2' stroke-linecap='round' stroke-miterlimit='10' d='M4 7h22M4 15h22M4 23h22'/%3E%3C/svg%3E"); /* Make the icon yellow */
+}
+
+#about .content-box p,
+#tokenomics .content-box p,
+#roadmap .content-box p,
+#dexscreener .content-box p {
+    font-size: 1.5rem; /* Increase font size */
+}
+
+#about {
+    position: relative;
+    background: none;  /* Remove background from about section */
+    padding: 5rem 0;
+    color: var(--text-color);
+}
+
+/* Remove the about section overlay since we have it on body */
+#about::before {
+    display: none;
+}
+
+#tokenomics {
+    position: relative;
+    background: url('G5.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    padding: 5rem 0;
+    color: var(--text-color);
+}
+
+/* Add a dark overlay to improve text readability */
+#tokenomics::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(13, 59, 18, 0.8); /* Dark green overlay with 80% opacity */
+    z-index: 1;
+}
+
+#tokenomics .container {
+    position: relative;
+    z-index: 2; /* Place content above the overlay */
+}
+
+.btn-dark-green {
+    background-color: #006400; /* Dark green color */
+    color: white;
+}
+
+.btn-buy-now {
+    background-color: white; /* Change background color to white */
+    color: var(--primary-green); /* Change text color to dark green */
+    font-size: 2rem; /* Increase font size */
+    padding: 1rem 3rem; /* Increased padding */
+    font-weight: bold;
+    border: none;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    transition: all 0.2s ease;
+}
+
+.btn-buy-now:hover {
+    transform: scale(1.1);
+    box-shadow: 0 6px 15px rgba(0, 0, 0, 0.3);
+    background-color: var(--light-yellow); /* Change hover background color */
+}
+
+.btn-buy-groat {
+    background: linear-gradient(45deg, #FFD700, #FFA500);
+    color: #000000;
+    font-size: 2.5rem;
+    font-weight: bold;
+    padding: 1.5rem 4rem;
+    border-radius: 50px;
+    text-transform: uppercase;
+    border: 4px solid #000000;
+    box-shadow: 0 6px 20px rgba(255, 215, 0, 0.4);
+    transition: all 0.3s ease;
+    margin: 2rem 0;
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-buy-groat:hover {
+    transform: scale(1.05) translateY(-5px);
+    box-shadow: 0 10px 25px rgba(255, 215, 0, 0.6);
+    color: #000000;
+    text-decoration: none;
+}
+
+.btn-buy-groat::before {
+    content: '';
+    position: absolute;
+    top: -50%;
+    left: -50%;
+    width: 200%;
+    height: 200%;
+    background: rgba(255, 255, 255, 0.2);
+    transform: rotate(45deg);
+    animation: shine 3s infinite;
+}
+
+@keyframes shine {
+    0% {
+        transform: translate(-50%, -50%) rotate(45deg);
+    }
+    100% {
+        transform: translate(150%, 150%) rotate(45deg);
+    }
+}
+
+/* Add new wrapper section styles */
+.header-to-about-wrapper {
+    position: relative;
+    background: url('G1.jpg') no-repeat center center;
+    background-size: cover;
+    background-position: center;
+    padding: 0;
+}
+
+.header-to-about-wrapper::before {
+    content: '';
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background: rgba(13, 59, 18, 0.8);
+    z-index: 1;
+}
+
+.header-to-about-wrapper > * {
+    position: relative;
+    z-index: 2;
+}
+
+/* Update about section to remove its background */
+#about {
+    position: relative;
+    background: none;
+    padding: 5rem 0;
+    color: var(--text-color);
+}
+
+#about::before {
+    display: none;
+}

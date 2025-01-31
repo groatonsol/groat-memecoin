@@ -3,16 +3,17 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>GROAT - Ancient Crypto</title>
+    <title>GROAT-Ancient Crypto</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=MedievalSharp&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Chopsic&display=swap" rel="stylesheet">
     <link href="style.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
 </head>
 <body>
     <nav class="navbar navbar-expand-lg">
         <div class="container">
-            <a class="navbar-brand" href="#">GROAT</a>
             <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
                 <span class="navbar-toggler-icon"></span>
             </button>
@@ -20,29 +21,40 @@
                 <ul class="navbar-nav me-auto">
                     <li class="nav-item"><a class="nav-link" href="#about">ABOUT</a></li>
                     <li class="nav-item"><a class="nav-link" href="#tokenomics">TOKENOMICS</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#roadmap">ROADMAP</a></li>
                     <li class="nav-item"><a class="nav-link" href="#dexscreener">DEXSCREENER</a></li>
                 </ul>
-                <button class="btn btn-join" data-bs-toggle="modal" data-bs-target="#telegramModal">JOIN US</button>
+                <!-- Removed button -->
             </div>
         </div>
     </nav>
 
-    <div class="wave-border"></div>
+    <!-- Add the button for mobile view -->
+    <div class="join-us-mobile">
+        <button class="btn btn-join" style="background-color: yellow;" data-bs-toggle="modal" data-bs-target="#telegramModal">JOIN US</button>
+    </div>
 
     <header class="hero-section">
         <div class="container text-center">
-            <h1 class="main-title">GROAT</h1>
-            <p class="subtitle">Ancient Wisdom, Modern Gains</p>
+            <h1 class="main-title" style="font-family: 'Chopsic', sans-serif; font-size: 4rem;">
+                <span class="groat">GR<span class="coin-symbol">O</span>AT</span>
+            </h1>
+            
         </div>
     </header>
 
     <section id="about" class="py-5">
         <div class="container">
             <div class="content-box">
-                <h2>About GROAT</h2>
+                <h2>ABOUT GROAT</h2>
                 <div class="row align-items-center">
                     <div class="col-md-6">
-                        <p>$GROAT represents the perfect fusion of history and innovation. Inspired by the ancient Groat coin, it carries the legacy of trade, prosperity, and timeless value</p>
+                        <p>
+                            Meet $GROAT, the memecoin with history baked in
+                            Inspired by the ancient Groat coin
+                            It’s the perfect blend of timeless value and cutting-edge innovation, offering both the excitement of a memecoin and the potential for substantial returns in the crypto space.
+                            Your gateway to a bold new era of opportunity
+                        </p>
                     </div>
                     <div class="col-md-6">
                         <img src="G1.jpg" alt="Ancient Groat" class="img-fluid rounded-image">
@@ -55,83 +67,77 @@
     <section id="tokenomics" class="py-5">
         <div class="container">
             <div class="content-box">
-                <h2>Tokenomics</h2>
+                <h2>TOKENOMICS</h2>
                 <div class="row">
                     <div class="col-md-6">
                         <div class="tokenomics-list">
                             <div class="token-item">
                                 <span>Total Supply:</span>
-                                <span class="highlight">X</span>
+                                <span class="highlight">100000000</span>
                             </div>
                             <div class="token-item">
-                                <span>Contract:</span>
-                                <span class="highlight">RENOUNCED</span>
-                            </div>
-                            <div class="token-item">
-                                <span>LP:</span>
+                                <span>Liquidity:</span>
                                 <span class="highlight">BURNT</span>
                             </div>
                             <div class="token-item">
-                                <span>Tax:</span>
-                                <span class="highlight">0%</span>
+                                <span>Dev Wallet:</span>
+                                <span class="highlight">3%</span>
                             </div>
                         </div>
                     </div>
-                    <div class="col-md-6">
-                        <img src="G3.jpg" alt="Tokenomics" class="img-fluid rounded-image">
-                    </div>
+                </div>
+                <div class="text-center mt-4">
+                    <a href="#" class="btn btn-buy-groat">BUY GROAT</a>
                 </div>
             </div>
         </div>
     </section>
     
     <section id="roadmap" class="py-5">
-        <div class="container">
-            <div class="content-box">
-                <h2>Roadmap</h2>
-                <div class="row">
-                    <div class="col-md-6">
-                        <img src="G6.jpg" alt="Roadmap" class="img-fluid rounded-image">
-                    </div>
-                    <div class="col-md-6">
-                        <div class="roadmap-phases">
-                            <div class="phase">
-                                <h3>Phase I</h3>
-                                <ul>
-                                    <li>Website Launch</li>
-                                    <li>Community Building</li>
-                                    <li>Token Launch</li>
-                                </ul>
-                            </div>
-                            <div class="phase">
-                                <h3>Phase II</h3>
-                                <ul>
-                                    <li>Marketing Campaign</li>
-                                    <li>CEX Listings</li>
-                                    <li>Partnership Development</li>
-                                </ul>
-                            </div>
-                            <div class="phase">
-                                <h3>Phase III</h3>
-                                <ul>
-                                    <li>Centralized Exchange Listing</li>
-                                    <li>Launch of Staking Platform</li>
-                                    <li>Intensive Marketing Campaign</li>
-                                </ul>
-                            </div>
-                            <div class="phase">
-                                <h3>Phase IV</h3>
-                                <ul>
-                                    <li> Commitment to Longevity </li>
-                                    <li>Community-Focused Evolution</li>
-                                </ul>
-                            </div>
+    <div class="container">
+        <div class="content-box">
+            <h2>ROADMAP</h2>
+            <div class="row">
+                <div class="col-md-12">
+                    <div class="roadmap-phases">
+                        <div class="phase">
+                            <h3>Phase 1</h3>
+                            <ul>
+                                <li>Website launch</li>
+                                <li>Community building</li>
+                                <li>Token launch on pump.fun</li>
+                            </ul>
+                        </div>
+                        <div class="phase">
+                            <h3>Phase 2</h3>
+                            <ul>
+                                <li>Marketing campaign</li>
+                                <li>Meme contest (boosting marketing efforts with community creativity!)</li>
+                                <li>DEX listing</li>
+                                <li>CEX listing</li>
+                                <li>Partnership development</li>
+                            </ul>
+                        </div>
+                        <div class="phase">
+                            <h3>Phase 3</h3>
+                            <ul>
+                                <li>Launch of staking platform</li>
+                                <li>Intensive marketing campaign</li>
+                            </ul>
+                        </div>
+                        <div class="phase">
+                            <h3>Phase 4</h3>
+                            <ul>
+                                <li>Long-term growth strategy</li>
+                                <li>Continuous development</li>
+                            </ul>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
-    </section>
+    </div>
+</section>
 
     <section id="dexscreener" class="py-5">
         <div class="container">
@@ -147,6 +153,8 @@
             <div class="social-bar">
                 <a href="https://t.me/+BRBWjqV9Lbc3ZTg0" class="social-icon"><i class="bi bi-telegram"></i></a>
                 <a href="https://x.com/groat_on_sol_"class="social-icon"><i class="bi bi-twitter"></i></a>
+                <a href="https://www.tiktok.com/@groatcoin"class="social-icon"><i class="bi bi-tiktok"></i></a>
+                <a href="https://www.youtube.com/@GROATCOIN" class="social-icon"><i class="bi bi-Youtube"></i></a>
             </div>
         </div>
     </footer>
@@ -160,13 +168,17 @@
                     <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
                 </div>
                 <div class="modal-body">
-                    <p>Connect with us on Telegram for updates and community discussions:</p>
+                    
                     <a href="https://t.me/+BRBWjqV9Lbc3ZTg0" class="btn btn-success">Join Telegram</a>
+                   <!-- <a href="https://x.com/groat_on_sol_" class="btn btn-success">Follow on X</a>
+                    <a href="https://www.tiktok.com/@groatcoin" class="btn btn-success">Watch TikTok</a>
+                    <a href="https://www.youtube.com/@GROATCOIN" class="btn btn-success">Subscribe YouTube</a> -->
                 </div>
             </div>
         </div>
     </div>
 
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
 </body>
 </html>
