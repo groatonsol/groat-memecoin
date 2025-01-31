@@ -12,6 +12,28 @@ document.addEventListener('DOMContentLoaded', function() {
         twitterModal.show();
     });
 
+    // Add click handler for BUY GROAT button
+    document.querySelector('.btn-buy-groat').addEventListener('click', function(e) {
+        e.preventDefault();
+        
+        // Create popup if it doesn't exist
+        let popup = document.querySelector('.coming-soon-popup');
+        if (!popup) {
+            popup = document.createElement('div');
+            popup.className = 'coming-soon-popup';
+            popup.textContent = 'COMING SOON';
+            document.body.appendChild(popup);
+        }
+
+        // Show popup
+        popup.classList.add('show');
+
+        // Hide popup after 2 seconds
+        setTimeout(() => {
+            popup.classList.remove('show');
+        }, 2000);
+    });
+
     // Initialize Intersection Observer
     const observer = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
