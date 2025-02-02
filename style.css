@@ -258,13 +258,28 @@ body::before {
 /* Images */
 .rounded-image {
     border-radius: 15px;
-    border: 3px solid var(--primary-green);
-    box-shadow: 5px 5px var(--accent-yellow);
     transition: transform 0.3s ease;
 }
 
 .rounded-image:hover {
     transform: translateY(-5px);
+}
+
+/* Center G15.jpg */
+img[src='G15.jpg'] {
+    display: block;
+    margin: 2rem auto;
+    max-width: 80%;
+    height: auto;
+    border-radius: 15px;
+    border: 3px solid var(--primary-green);
+    box-shadow: 5px 5px var(--accent-yellow);
+}
+
+@media (max-width: 768px) {
+    img[src='G15.jpg'] {
+        max-width: 95%;
+    }
 }
 
 /* Roadmap */
@@ -483,13 +498,13 @@ body::before {
     color: var(--text-color); /* Updated text color */
     font-size: 1.2rem;
     text-align: center;
-    background: var(--secondary-green);
+    background: transparent; /* Remove black background */
     padding: 2rem; /* Increased padding */
     border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    min-height: 200px; /* Set minimum height */
+    min-height: 400px; /* Set minimum height */
     width: 100%; /* Ensure full width */
     margin: 2rem 0; /* Add vertical margin */
+    box-shadow: none; /* Remove shadow */
 }
 
 /* Remove Cartoon Image */
@@ -520,15 +535,9 @@ body::before {
     color: var(--text-color);
 }
 
+/* Remove the overlay by setting display: none */
 #about::before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom: 0;
-    background: rgba(13, 59, 18, 0.2); /* Reduced opacity from 0.4 to 0.2 */
-    z-index: 1;
+    display: none;
 }
 
 #about .container {
