@@ -1,5 +1,4 @@
-@import url('https://fonts.googleapis.com/css2?family=Babydoll&display=swap');
-
+@import url('https://fonts.googleapis.com/css2?family=Takota&display=swap');
 :root {
     --primary-green: #0D3B12; /* Darkest green */
     --secondary-green: #000000; /* Black */
@@ -19,14 +18,13 @@
 }
 
 
-body {
-    font-family: 'Babydoll', Arial, Helvetica, sans-serif;
+body{
+    font-family:font-family: 'Takota', sans-serif;}
     font-weight: 600; /* Add semi-bold weight to all text */
     color: var(--text-color); /* Use white for text */
     background: var(--bg-color) url('G13.jpg') no-repeat center center fixed;
     background-size: cover;
     position: relative;
-}
 
 /* Remove the overlay completely */
 body::before {
