@@ -19,7 +19,7 @@
 
 
 body{
-    font-family:font-family: 'Takota', sans-serif;}
+    font-family:font-family: 'Takota', sans-serif;
     font-weight: 600; /* Add semi-bold weight to all text */
     color: var(--text-color); /* Use white for text */
     background: var(--bg-color) url('G13.jpg') no-repeat center center fixed;
